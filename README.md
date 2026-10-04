@@ -1,49 +1,68 @@
 # Customer Order & Inventory Management System
 
-A full-stack business management application developed using Java, Spring Boot, React JS and MySQL.
+A full-stack web application for managing customers, products, orders, and inventory through a web-based interface and RESTful APIs.
 
-The system helps manage customers, products, orders and inventory through a web-based interface and RESTful APIs.
+The system is designed to simulate a real-world business workflow where customers place orders, products are validated against available stock, order totals are calculated automatically, and inventory is updated after successful order placement.
 
-## Features
+---
 
-- Customer management
-    - Add customers
-    - View customers
-    - Update customer details
-    - Delete customers
+## 🚀 Features
 
-- Product management
-    - Add products
-    - View products
-    - Update products
-    - Delete products
-    - Manage stock quantity
+### 👤 Customer Management
 
-- Order management
-    - Create orders with multiple products
-    - Validate product stock
-    - Calculate order totals automatically
-    - Update product inventory after an order
-    - View order details
+- Add new customers
+- View all customers
+- Update customer details
+- Delete customers
+- Input validation for customer information
 
-- Inventory management
-    - View current product stock
-    - Identify low-stock products
-    - Identify out-of-stock products
+### 📦 Product Management
 
-- Dashboard
-    - Total customers
-    - Total products
-    - Total orders
-    - Total sales
+- Add products
+- View products
+- Update product details
+- Delete products
+- Track product price and category
+- Manage available stock quantity
 
-- Backend validation and exception handling
+### 🛒 Order Management
 
-- REST API testing using Postman
+- Create orders for customers
+- Add multiple products to a single order
+- Validate product availability before placing an order
+- Calculate item subtotal automatically
+- Calculate complete order total automatically
+- Automatically reduce inventory after a successful order
 
-## Technology Stack
+### 📊 Dashboard
+
+Provides an overview of:
+
+- Total customers
+- Total products
+- Total orders
+- Total sales
+
+### 📋 Inventory Management
+
+- View available stock
+- Identify low-stock products
+- Identify out-of-stock products
+- Track stock changes after orders
+
+### 🛡️ Validation & Error Handling
+
+- Request validation using Spring Boot Validation
+- Global exception handling
+- Customer and product not-found handling
+- Insufficient-stock validation
+
+---
+
+## 🛠️ Technology Stack
 
 ### Backend
+
 - Java
 - Spring Boot
 - Spring Data JPA
@@ -52,32 +71,37 @@ The system helps manage customers, products, orders and inventory through a web-
 - REST APIs
 
 ### Frontend
+
 - React JS
 - JavaScript
 - HTML
 - CSS
 - Axios
-- React Router
 
 ### Database
+
 - MySQL
 
-### Tools
+### Development & Testing
+
 - IntelliJ IDEA
-- MySQL Workbench
 - Postman
 - Git
 - GitHub
 
-## System Architecture
+---
+
+## 🏗️ Application Architecture
 
 ```text
 React JS Frontend
-        |
-        | REST APIs / JSON
-        ↓
+       ↓
+   REST APIs
+       ↓
 Spring Boot Backend
-        |
-        | JPA / Hibernate
-        ↓
-      MySQL
+       ↓
+Spring Data JPA
+       ↓
+   Hibernate
+       ↓
+     MySQLgit
